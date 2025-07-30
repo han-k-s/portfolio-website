@@ -200,6 +200,10 @@ a.page span {
     position: center center;
 }
 
+.light {
+    border: solid 1px #ffffff;
+}
+
 /*About Page*/
 
 
@@ -321,7 +325,8 @@ h1 {
 .one-one-one-one,
 .two-one,
 .half-half-two,
-.postcard {
+.postcard,
+#exhibition-logo {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 0.75vw;
@@ -352,7 +357,8 @@ h1 {
 }
 
 .half-half-two,
-.postcard {
+.postcard,
+#exhibition-logo {
     grid-auto-rows: 1fr;
     height: 100%;
 }
@@ -387,6 +393,32 @@ h1 {
     grid-row: 2;
 }
 
+#exhibition-logo>*:nth-child(1) {
+    grid-column: span 12;
+    grid-row: 1
+}
+
+#exhibition-logo>*:nth-child(2) {
+    grid-column: span 3;
+    grid-row: 2;
+}
+
+#exhibition-logo>*:nth-child(3) {
+    grid-column: span 3;
+    grid-row: 2;
+}
+
+#exhibition-logo>*:nth-child(4) {
+    grid-column: span 3;
+    grid-row: 2;
+}
+
+#exhibition-logo>*:nth-child(5) {
+    grid-column: span 3;
+    grid-row: 2;
+}
+
+
 /* Modal */
 
 .image-grid img {
@@ -395,6 +427,10 @@ h1 {
 
 .image:hover {
     border: solid 1px rgb(255, 255, 255)
+}
+
+.light:hover {
+    border: solid 1px rgb(0, 38, 255)
 }
 
 #modal {
