@@ -264,7 +264,7 @@ h1 {
 }
 
 .first h4 {
-    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .project-content div.projectname {
@@ -606,6 +606,10 @@ h1 {
         font-size: 10.5vw;
     }
 
+    h3 {
+        font-size: 2rem;
+    }
+
     h4 {
         font-size: 14pt;
     }
@@ -614,6 +618,17 @@ h1 {
     .project-content div video {
         width: 100%;
     }
+
+    .project-content #logo-sketches,
+    .project-content #logo-iterations {
+        display: flex;
+    }
+
+    .project-content #logo-sketches img,
+    .project-content #logo-iterations img {
+        width: 48%;
+    }
+
 
     .image:hover {
         border: solid 1px #ffffff30
