@@ -87,7 +87,7 @@ a {
     transform: rotate(360deg);
 }
 
-.nav a {
+.pages a {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 400;
     display: block;
@@ -241,7 +241,7 @@ a.page span {
     position: relative;
     z-index: 1;
     margin-top: calc(100vh - 175px);
-    padding: 20px 2% 50px 0;
+    padding: 20px 2% 20px 0;
     background-color: rgb(20, 19, 19);
     color: white;
 }
@@ -417,6 +417,13 @@ h1 {
     grid-column: span 9;
 }
 
+.project-content .adjacent {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+
 
 /* Modal */
 
@@ -528,7 +535,7 @@ h1 {
 @media (max-width: 630px) {
 
     html {
-        margin: 30px;
+        margin: 25px;
     }
 
     body {
