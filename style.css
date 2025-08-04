@@ -530,6 +530,10 @@ h1 {
     .project-content .one video {
         width: 100%;
     }
+
+    .project-content .adjacent {
+        display: block;
+    }
 }
 
 @media (max-width: 630px) {
@@ -617,10 +621,6 @@ h1 {
 
     .light:hover {
         border: solid 3px #ffffff
-    }
-
-    .project-content .adjacent {
-        display: block;
     }
 
     #modal {
