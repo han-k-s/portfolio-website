@@ -619,6 +619,10 @@ h1 {
         border: solid 3px #ffffff
     }
 
+    .project-content .adjacent {
+        display: block;
+    }
+
     #modal {
         background-color: rgba(0, 0, 0, 0);
     }
