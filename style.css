@@ -33,13 +33,16 @@ h2 {
 h3 {
     font-size: 3rem;
     margin-top: 70px;
-    margin-bottom: 20px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #ffffff;
+    line-height: 100%;
 }
 
 h4 {
+    font-weight: 500;
     font-size: 1.5rem;
     letter-spacing: 0.1em;
+    margin-top: 40px;
 }
 
 .scope {
@@ -50,17 +53,8 @@ p {
     min-width: 300px;
     max-width: 480px;
     line-height: 150%;
+    width: 90%;
     margin-top: 0;
-}
-
-.across {
-    display: flex;
-}
-
-.down {
-    display: block;
-    width: 100%;
-    margin-right: 30px;
 }
 
 .column-text {
@@ -79,6 +73,8 @@ a {
 
 .page-content {
     margin-left: 240px;
+    position: relative;
+    display: flow-root;
 }
 
 .kh-icon img {
@@ -201,51 +197,36 @@ a.page span {
 }
 
 .light {
-    border: solid 1px #ffffff;
+    border: solid 3px #ffffff;
 }
 
 /*About Page*/
 
+#about {
+    display: flex;
+}
 
 #portrait {
     margin-top: 8px;
+    margin-right: 30px;
     width: 25vw;
     height: 40vw;
     object-fit: cover;
 }
 
-#about-content-text {
-    display: block;
-    margin-left: 40px;
-}
-
-#about-content-body {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-}
-
-.about-content-column {
-    display: block;
-    width: 50%;
-    margin: 0;
-}
-
 #hobby {
-    flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
-#hobby img {
-    width: 50%;
+#hobby .one-one {
+    margin-bottom: 0.5vw;
+}
+
+#hobby div img {
+    width: 20%;
 }
 
 /* Project Pages */
-
-.page-content {
-    position: relative;
-    display: flow-root;
-}
 
 .headerimg {
     position: fixed;
@@ -266,19 +247,29 @@ a.page span {
 }
 
 .project-content div {
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
 }
 
 h1 {
     font-size: 5.75vw;
     text-wrap: wrap;
-    line-height: 90%;
-    margin-bottom: 2vw;
+    line-height: 100%;
     text-transform: uppercase;
+    margin-left: -0.4vw;
+    margin-bottom: 20px;
+}
+
+.project-content .first {
+    margin-bottom: 0;
+}
+
+.first h4 {
+    margin-top: 30px;
 }
 
 .project-content div.projectname {
     margin: 0;
+    margin-bottom: 2vw;
     height: 130px;
 }
 
@@ -330,6 +321,10 @@ h1 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 0.75vw;
+}
+
+.one-one:has(h4) {
+    margin-top: 0;
 }
 
 .one>* {
@@ -418,6 +413,10 @@ h1 {
     grid-row: 2;
 }
 
+#titlewall>* {
+    grid-column: span 9;
+}
+
 
 /* Modal */
 
@@ -430,7 +429,7 @@ h1 {
 }
 
 .light:hover {
-    border: solid 1px rgb(0, 38, 255)
+    border: solid 3px rgb(0, 153, 255)
 }
 
 #modal {
@@ -448,7 +447,7 @@ h1 {
 }
 
 #current-image {
-    width: 75%;
+    width: 60%;
     height: auto;
 }
 
@@ -467,4 +466,161 @@ h1 {
     cursor: pointer;
     width: 60px;
     height: 60px;
+}
+
+@media (max-width: 1425px) {
+
+    #about div {
+        display: block;
+    }
+
+    #hobby {
+        margin-top: 50px;
+    }
+
+}
+
+@media (max-width: 1125px) {
+
+    #hobby div img {
+        width: 45%;
+    }
+
+}
+
+@media (max-width: 950px) {
+
+    #about {
+        display: block;
+    }
+
+    #portrait {
+        width: 60vw;
+        height: 60vw;
+        margin-bottom: 10px;
+    }
+
+    .project-content .one,
+    .one-one,
+    .one-one-one,
+    .one-one-one-one,
+    .two-one,
+    .half-half-two,
+    .postcard,
+    #exhibition-logo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .project-content div img,
+    .project-content div video {
+        width: 48%;
+        height: auto;
+        margin: 0.1vw 0;
+    }
+
+    .project-content .one img,
+    .project-content .one video {
+        width: 100%;
+    }
+}
+
+@media (max-width: 630px) {
+
+    html {
+        margin: 30px;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        font-size: 11pt;
+    }
+
+    .nav {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+
+    .kh-icon img {
+        width: 50px;
+        margin-bottom: 8px;
+    }
+
+    .nav a {
+        font-size: 10pt;
+        margin-bottom: 3px;
+    }
+
+    .nav a:nth-of-type(2) {
+        letter-spacing: 0.1em;
+    }
+
+    a.page {
+        margin-left: 0;
+        padding-left: 0;
+        transition: none;
+    }
+
+    .page-selected {
+        margin-left: 0;
+        padding-left: 0;
+        color: white;
+        background-color: rgba(0, 0, 0, 0);
+        border-bottom: solid 1px white;
+        transition: none;
+    }
+
+    .page-content {
+        margin: 0;
+    }
+
+    .headerimg {
+        position: relative;
+        width: 100%;
+    }
+
+    .project-content {
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    .project-content div.projectname {
+        margin-bottom: 2vw;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 10.5vw;
+    }
+
+    h4 {
+        font-size: 14pt;
+    }
+
+    .project-content div img,
+    .project-content div video {
+        width: 100%;
+    }
+
+    .image:hover {
+        border: solid 1px #ffffff30
+    }
+
+    .light:hover {
+        border: solid 3px #ffffff
+    }
+
+    #modal {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #current-image,
+    #close,
+    #previous,
+    #next {
+        display: none;
+    }
+
 }
