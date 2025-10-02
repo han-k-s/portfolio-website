@@ -178,18 +178,12 @@ a.page span {
     margin-bottom: 40px;
 }
 
-.project {
-    margin-bottom: 0.5%;
-}
-
-.project:first-of-type {
-    padding-top: 0;
-}
-
-.cover img {
+.cover img,
+.cover video {
     width: 99%;
     object-fit: cover;
     position: center center;
+    margin-bottom: 0.5%;
 }
 
 .light {
@@ -275,6 +269,10 @@ h1 {
 
 .additional-info {
     font-style: italic;
+}
+
+.disclaimer {
+    font-size: 9pt;
 }
 
 .project-link {
