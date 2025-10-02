@@ -45,19 +45,6 @@ h4 {
     margin-top: 40px;
 }
 
-.page-content .project-content .scope {
-    margin: 35px 0;
-}
-
-.page-content .project-content .scope h4 {
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-#counterpoint-scope {
-    margin-top: 80px;
-}
-
 p {
     min-width: 300px;
     max-width: 480px;
@@ -432,6 +419,18 @@ h1 {
     margin: 0;
 }
 
+.page-content .project-content .scope {
+    margin: 35px 0;
+}
+
+.page-content .project-content .scope h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#counterpoint-scope {
+    margin-top: 80px;
+}
 
 
 /* Modal */
