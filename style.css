@@ -33,20 +33,19 @@ h2 {
 h3 {
     font-size: 3rem;
     margin-top: 70px;
+    margin-bottom: 20px;
     padding-bottom: 8px;
     border-bottom: 1px solid #ffffff;
     line-height: 100%;
+    width: calc(100% - 0.75vw);
 }
 
 h4 {
     font-weight: 500;
     font-size: 1.5rem;
     letter-spacing: 0.1em;
-    margin-top: 40px;
-}
-
-.scope {
-    margin-bottom: 15px;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 p {
@@ -57,8 +56,23 @@ p {
     margin-top: 0;
 }
 
-.column-text {
-    margin-right: 50px;
+.column {
+    display: block;
+    width: calc(50% - 0.75vw);
+    margin: 0;
+    margin-right: 0.75vw;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.section {
+    /* margin-top: 0.75vw; */
+    margin-bottom: 40px;
 }
 
 a {
@@ -173,7 +187,11 @@ a.page span {
 }
 
 .dark-on-dark {
-    border: solid 1px #ffffff30
+    border: solid 2px #ffffff1a
+}
+
+.light {
+    border: solid 2px #ffffff;
 }
 
 /* Home Page*/
@@ -182,22 +200,12 @@ a.page span {
     margin-bottom: 40px;
 }
 
-.project {
-    margin-bottom: 0.5%;
-}
-
-.project:first-of-type {
-    padding-top: 0;
-}
-
-.cover img {
+.cover img,
+.cover video {
     width: 99%;
     object-fit: cover;
     position: center center;
-}
-
-.light {
-    border: solid 3px #ffffff;
+    margin-bottom: 0.5%;
 }
 
 /*About Page*/
@@ -214,16 +222,9 @@ a.page span {
     object-fit: cover;
 }
 
-#hobby {
-    margin-top: 40px;
-}
-
-#hobby .one-one {
-    margin-bottom: 0.5vw;
-}
-
 #hobby div img {
-    width: 20%;
+    width: 38%;
+    margin: 0 0.75vw 0.75vw 0;
 }
 
 /* Project Pages */
@@ -246,9 +247,9 @@ a.page span {
     color: white;
 }
 
-.project-content div {
+/* .project-content div {
     margin: 10px 0 20px 0;
-}
+} */
 
 h1 {
     font-size: 5.75vw;
@@ -267,7 +268,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.project-content div.projectname {
+.project-content div.project-name {
     margin: 0;
     margin-bottom: 2vw;
     height: 130px;
@@ -281,6 +282,10 @@ h1 {
     font-style: italic;
 }
 
+.disclaimer {
+    font-size: 9pt;
+}
+
 .project-link {
     color: #ffffff;
     text-decoration: none;
@@ -290,139 +295,117 @@ h1 {
     text-decoration: underline;
 }
 
-.project-content div img {
-    margin-right: 1%;
+.project-content img,
+.project-content video,
+.video-container {
+    margin-bottom: 20px;
     width: 100%;
-    height: 100%;
     display: block;
     object-fit: cover;
 }
 
-.project-content video {
+.project-content .fullspread {
     width: 100%;
 }
 
-.project-content .project-text {
-    margin-bottom: 40px;
+.column video {
+    width: 100%;
 }
 
-.project-content .project-text div {
-    margin: 0;
+.project-content .main {
+    max-width: 1300px;
 }
 
-.project-content .one,
-.one-one,
-.one-one-one,
-.one-one-one-one,
-.two-one,
-.half-half-two,
-.postcard,
-#exhibition-logo {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 0.75vw;
+#wizardline-storyboard {
+    margin-top: 1.25vw;
 }
 
-.one-one:has(h4) {
-    margin-top: 0;
+#wizardline-storyboard .column,
+.page-content .project-content .brand>* {
+    width: calc(33.33% - 0.75vw);
+    margin: 0 0.75vw 15px 0;
 }
 
-.one>* {
-    grid-column: span 12;
-}
-
-.one-one>* {
-    grid-column: span 6;
-}
-
-.one-one-one>* {
-    grid-column: span 4;
-}
-
-.one-one-one-one>* {
-    grid-column: span 3;
-}
-
-.two-one> :nth-child(1) {
-    grid-column: span 8;
-}
-
-.two-one> :nth-child(2) {
-    grid-column: span 4;
-}
-
-.half-half-two,
-.postcard,
-#exhibition-logo {
-    grid-auto-rows: 1fr;
+.page-content .project-content .brandcard img {
+    width: calc(50% - 0.75vw);
+    margin: 0.75vw 0.75vw 0 0;
     height: 100%;
 }
 
-.half-half-two>*:nth-child(1) {
-    grid-column: span 4;
-    grid-row: 1;
+.video-container {
+    position: relative;
+    width: 80%;
+    padding-bottom: 45%;
+    height: 0;
 }
 
-.half-half-two>*:nth-child(2) {
-    grid-column: span 4;
-    grid-row: 2;
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.half-half-two>*:nth-child(3) {
-    grid-column: 5 / -1;
-    grid-row: 1 / 3;
+#expiration-motion .column {
+    margin-top: 0;
 }
 
-.postcard>*:nth-child(1) {
-    grid-column: span 7;
-    grid-row: 1 / 3;
+#expiration-motion video {
+    width: 100%;
 }
 
-.postcard>*:nth-child(2) {
-    grid-column: span 5;
-    grid-row: 1;
+#testimonial {
+    margin-top: 70px;
 }
 
-.postcard>*:nth-child(3) {
-    grid-column: span 5;
-    grid-row: 2;
+#automations img,
+#campaigns img,
+#counterpoint-type .column video {
+    height: 35vw;
+    object-fit: fill;
 }
 
-#exhibition-logo>*:nth-child(1) {
-    grid-column: span 12;
-    grid-row: 1
+#automations,
+#campaign,
+#counterpoint-type .column {
+    align-items: stretch;
+    overflow: hidden;
 }
 
-#exhibition-logo>*:nth-child(2) {
-    grid-column: span 3;
-    grid-row: 2;
+#automations {
+    width: 34%;
+    margin-right: 0.75vw;
 }
 
-#exhibition-logo>*:nth-child(3) {
-    grid-column: span 3;
-    grid-row: 2;
+#campaigns {
+    width: 64%;
 }
 
-#exhibition-logo>*:nth-child(4) {
-    grid-column: span 3;
-    grid-row: 2;
+#counterpoint-type .column video {
+    height: 21vw;
 }
 
-#exhibition-logo>*:nth-child(5) {
-    grid-column: span 3;
-    grid-row: 2;
-}
-
-#titlewall>* {
-    grid-column: span 9;
-}
 
 .project-content .adjacent {
     display: flex;
     justify-content: space-between;
     margin: 0;
+    margin-top: 40px;
 }
 
+.scope {
+    margin: 35px 0;
+}
+
+.scope h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#counterpoint-scope {
+    margin-top: 80px;
+}
 
 
 /* Modal */
@@ -432,11 +415,11 @@ h1 {
 }
 
 .image:hover {
-    border: solid 1px rgb(255, 255, 255)
+    border: solid 2px rgba(255, 255, 255, 0.418)
 }
 
 .light:hover {
-    border: solid 3px rgb(0, 153, 255)
+    border: solid 2px rgb(0, 203, 225)
 }
 
 #modal {
@@ -481,21 +464,73 @@ h1 {
         display: block;
     }
 
+    #about-content .column {
+        width: 100%;
+    }
+
     #hobby {
-        margin-top: 50px;
+        margin-top: 30px;
+    }
+
+    #hobby div img {
+        width: 30%;
+    }
+
+    .project-content .column h4 {
+        font-size: 1.25rem;
     }
 
 }
 
-@media (max-width: 1125px) {
+@media (max-width: 1335px) {
 
-    #hobby div img {
-        width: 45%;
+    #wizardline-storyboard .column,
+    .page-content .project-content .brand>* {
+        width: calc(50% - 0.75vw);
     }
 
+    .project-content .brand .column {
+        width: 100%;
+    }
+
+    .project-content .column h4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 1150px) {
+
+    #automations img,
+    #campaigns img,
+    #counterpoint-type .column video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    #automations {
+        width: 90%;
+    }
+
+    #campaigns {
+        width: 90%;
+    }
+
+    .project-content .column h4 {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 950px) {
+
+    .row {
+        display: block;
+    }
+
+    .column,
+    #wizardline-storyboard .column {
+        width: 100%;
+    }
 
     #about {
         display: block;
@@ -507,28 +542,21 @@ h1 {
         margin-bottom: 10px;
     }
 
-    .project-content .one,
-    .one-one,
-    .one-one-one,
-    .one-one-one-one,
-    .two-one,
-    .half-half-two,
-    .postcard,
-    #exhibition-logo {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .project-content div img,
-    .project-content div video {
-        width: 48%;
+    .project-content div video,
+    #expiration-motion video,
+    .page-content .project-content .brand>* {
+        margin-bottom: 10px;
+        width: 90%;
         height: auto;
-        margin: 0.1vw 0;
     }
 
-    .project-content .one img,
-    .project-content .one video {
-        width: 100%;
+    .project-content div p {
+        margin-bottom: 30px;
+    }
+
+    .project-content .scope p {
+        margin-bottom: 16px;
     }
 
     .project-content .adjacent {
@@ -536,7 +564,7 @@ h1 {
     }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 750px) {
 
     html {
         margin: 25px;
@@ -597,7 +625,7 @@ h1 {
         padding-top: 10px;
     }
 
-    .project-content div.projectname {
+    .project-content div.project-name {
         margin-bottom: 2vw;
         height: 100%;
     }
@@ -631,11 +659,11 @@ h1 {
 
 
     .image:hover {
-        border: solid 1px #ffffff30
+        border: solid 2px #ffffff30
     }
 
     .light:hover {
-        border: solid 3px #ffffff
+        border: solid 2px #ffffff
     }
 
     #modal {
