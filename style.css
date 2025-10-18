@@ -44,11 +44,16 @@ h4 {
     font-weight: 500;
     font-size: 1.5rem;
     letter-spacing: 0.1em;
-    margin-top: 40px;
+    margin: 20px 0;
 }
 
 .scope {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.scope h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 p {
@@ -253,10 +258,6 @@ a.page span {
     color: white;
 }
 
-/* .project-content div {
-    margin: 10px 0 20px 0;
-} */
-
 h1 {
     font-size: 5.75vw;
     text-wrap: wrap;
@@ -266,18 +267,14 @@ h1 {
     margin-bottom: 20px;
 }
 
-.project-content .first {
-    margin-bottom: 0;
-}
-
-.first h4 {
-    margin-bottom: 10px;
-}
-
 .project-content div.project-name {
     margin: 0;
     margin-bottom: 2vw;
     height: 130px;
+}
+
+#counterpoint {
+    height: 180px;
 }
 
 .indented {
@@ -392,11 +389,14 @@ h1 {
     height: 21vw;
 }
 
+#counterpoint-grid-color .column h4 {
+    margin-top: 0;
+}
 
 .project-content .adjacent {
     display: flex;
     justify-content: space-between;
-    margin: 0;
+    margin: 40px 0;
 }
 
 
