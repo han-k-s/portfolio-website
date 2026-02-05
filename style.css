@@ -320,7 +320,8 @@ h1 {
 }
 
 #wizardline-storyboard .column,
-.page-content .project-content .brand>* {
+.page-content .project-content .brand>*,
+.page-content .project-content .spectacle-spreads>* {
     width: calc(33.33% - 0.75vw);
     margin: 0 0.75vw 15px 0;
 }
@@ -474,7 +475,8 @@ h1 {
 @media (max-width: 1335px) {
 
     #wizardline-storyboard .column,
-    .page-content .project-content .brand>* {
+    .page-content .project-content .brand>*,
+    .page-content .project-content .spectacle-spreads>* {
         width: calc(50% - 0.75vw);
     }
 
@@ -534,7 +536,8 @@ h1 {
     .project-content div img,
     .project-content div video,
     #expiration-motion video,
-    .page-content .project-content .brand>* {
+    .page-content .project-content .brand>*,
+    .page-content .project-content .spectacle-spreads>* {
         margin-bottom: 10px;
         width: 90%;
         height: auto;
